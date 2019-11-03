@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/dmop-red-coins/api/controllers"
-	"github.com/dmop-red-coins/api/seed"
+	"github.com/dmop/red-coins/api/controllers"
+	"github.com/dmop/red-coins/api/seed"
 )
 
 var server = controllers.Server{}
