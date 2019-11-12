@@ -11,6 +11,7 @@ type Transaction struct {
 	Amount    float64   `validate:"required" gorm:"not null;" json:"amount"`
 	Type      string    `validate:"required" gorm:"not null;" json:"type"`
 	UserId    int    	`validate:"required" gorm:"not null" json:"user_id"`
+	Date      string    `validate:"required" gorm:"not null" json:"date"`
 	CreatedAt time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`
 	UpdatedAt time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"updated_at"`
 }

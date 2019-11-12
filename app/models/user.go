@@ -9,7 +9,7 @@ import (
 type User struct {
 	ID        int    `json:"id" gorm:"primary_key;auto_increment"`
 	Name 	  string `gorm:"not null;" validate:"required" json:"name"`
-	Email     string `gorm:"not null;" validate:"required,email" json:"email"`
+	Email     string `gorm:"unique;not null;" validate:"required,email" json:"email"`
 	Password  string `gorm:"not null;" validate:"required" json:"password"`
 	Born 	  time.Time `gorm:"not null;" json:"born"`
 	CreatedAt time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`

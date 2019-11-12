@@ -25,7 +25,7 @@ func getBitcoinPrice() {
 	coinSecret := os.Getenv("COIN_SECRET")
 
 	client := &http.Client{}
-	req, err := http.NewRequest("GET","https://pro-api.coinmarketcap.com/v1/tools/price-conversion?id=1", nil)
+	req, err := http.NewRequest("GET","https://pro-api.coinmarketcap.com/v1/tools/price-conversion", nil)
 	
 	if err != nil {
 		log.Panic(err)

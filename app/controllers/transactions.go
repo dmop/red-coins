@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"github.com/labstack/echo/v4"
-	"log"
 	"red-coins/app/helpers"
 	"red-coins/app/models"
 	"red-coins/config"
@@ -27,7 +26,6 @@ func TransactionStore(c echo.Context) error {
 	}
 	
 	value, ok := config.RC.Get("price").Result()
-	log.Println("1")
 
 	if ok != nil {
 		return c.JSON(422, "error")
